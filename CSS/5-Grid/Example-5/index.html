@@ -1,0 +1,42 @@
+<!-- grid-auto-rows/columns -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            width: 50%;
+            gap: 20px;
+            border: 1px solid black;
+
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+
+            /* grid-auto-rows/columns set the size of the rows / columns */
+            grid-auto-rows: 190px;
+            grid-auto-columns: 100px;
+        }
+        .item{
+            background-color: orange;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="rider item">Rider</div>
+        <div class="item">One</div>
+        <div class="item">Two</div>
+        <div class="item">Three</div>
+        <div class="item">Four</div>
+        <div class="item">Five</div>
+        <div class="item">Six</div>
+        <div class="item">Seven</div>
+        <div class="item">Eight</div>
+    </div>
+</body>
+</html>

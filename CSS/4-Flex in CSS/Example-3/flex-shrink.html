@@ -1,0 +1,58 @@
+<!-- flex-shrink -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .parent{
+            display: flex;
+            width: 350px;
+            border: 1px solid black;
+        }
+        .block{
+            border: 1px solid orangered;
+            text-align: center;
+            height: 40px;
+            flex-basis: 100px;
+        }
+        .red{
+            color: #fff;
+            background-color: red;
+        }
+        .green{
+            color: #fff;
+            background-color: green;
+
+            /* here use of flex-shrink */
+            flex-shrink: 4;
+        }
+        .blue{            
+            color: #fff;
+            background-color: blue;
+        }
+        .black{
+            color: #ccc;
+            background-color: black;
+        }
+        .yellow{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="red block">Red</div>
+        <div class="green block">Green</div>
+        <div class="blue block">Blue</div>
+        <div class="yellow block">Yellow</div>
+        <div class="black block">Black</div>
+    </div>
+</body>
+</html>

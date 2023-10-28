@@ -1,0 +1,29 @@
+/* specificity */
+
+.female{     /* 010*/
+    color: red;
+}
+.female{  
+    color: green;
+}
+#maharashtra .female{    /* 110 */
+    color: brown;
+}
+.nmaharashtra .female{     /* 020 */
+    color: aqua;
+}
+#bharat .nmaharashtra .female{     /* 120 */
+    color: blue;
+}
+.india #maharashtra .female{     /* 120 */
+    color: red;
+}
+.india .nmaharashtra .male{    /* 030 */
+    color: green;
+}
+.india .nmaharashtra h4.male{   /* h4 added just for increase specificity */
+    color: purple;
+}
+.nmaharashtra .female{    /* 020 */
+    color: orange !important;   /* even though specificity is less, when we use important keyword it become more important than others */
+}

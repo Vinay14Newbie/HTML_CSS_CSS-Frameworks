@@ -1,0 +1,33 @@
+<!-- 17th sep 2023 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Accesibility is more about attention to detail -->
+    <form action="./example.in">
+        <fieldset aria-user-info="add your information here">
+            <legend>User Info</legend>
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" placeholder="Enter Username">
+
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="Enter Password">
+        </fieldset>
+    </form>
+    <form action="./example.in">
+        <fieldset aria-user-adress="Enter you adress">
+            <legend>Your Adress</legend>
+            <label for="address">Adress</label>
+            <input type="text" name="adress" id="adress" placeholder="Enter Adress">
+
+            <label for="permanent_adress"">Permanent Adress</label>
+            <!-- by using tabindex, when we press tab it will reach that line by mentioned tabindex -->
+            <input type="text" tabindex="1" name="permanent_adress" id="permanent_adress" placeholder="Enter Permanent Adress">
+        </fieldset>
+    </form>
+</body>
+</html>

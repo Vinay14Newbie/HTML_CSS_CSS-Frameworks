@@ -1,0 +1,82 @@
+<!-- screen only | orientation:landscape -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .parent{
+            background-color: grey;
+        }
+        .child{
+            width: 25%;
+            height: 200px;
+            border: 1px solid black;
+            text-align: center;
+            background-color: orange;
+
+            /* float:left is used for not keeping any space between the boxes */
+            float: left;
+        }
+
+        /* so, below the 1200px & above 700px the boxes will take 33% width of available screen & other are will also take respectively */
+        @media (min-width:700px) and (max-width:1200px){
+            .child{
+                width: 33.33%;
+            }
+        }
+        @media (min-width:400px) and (max-width:700px){
+            .child{
+                width: 50%;
+            }
+        }
+
+        /* below the 400px the items will display in columns | here i used flex-column */
+        @media (max-width:400px){
+            .parent{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        /* by this when you do other stuffs like print the background color of the one box will be orange again */
+        @media only screen{
+            .one{
+                background-color: lightgreen;
+            }
+        }
+
+        /* as off course when screen in landscape the background will pink */
+        /* in pc default screen is landscape */
+        @media (orientation:landscape){
+            .one{
+                background-color: pink;
+            }
+        }
+
+        /* this normally done with javascript it is just a script of it */
+        /* @media (prefers-color-scheme:dark){
+            body{
+                background-color: black;
+                color:white;
+            }
+        } */
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child one">One</div>
+        <div class="child">Two</div>
+        <div class="child">Three</div>
+        <div class="child">Four</div>
+    </div>
+</body>
+</html>

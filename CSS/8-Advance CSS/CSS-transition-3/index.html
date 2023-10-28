@@ -1,0 +1,63 @@
+<!-- transition -->
+<!-- transition-property | transition-duration |  transition-timing-function | transition-delay -->
+<!-- transition-short-hand -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* transition property needs pseudo classes OR javascript to work */
+        .box1{
+            width: 400px;
+            height: 300px;
+            text-align: center;
+            border: 2px dotted red;
+            border-radius: 10px;
+            background-color: coral;
+
+            /* by using transition-property we can select on which property transition we actually want if you not declare it, it will to all automatically OR you can use 'all'*/
+            transition-property: all;    /* width, background-color */
+            transition-duration: 1.5s;
+            transition-delay: 1s;
+            transition-timing-function: ease-in;
+        }
+
+        /* when following property will apply & transition will be as above */
+        .box1:hover{
+            width: 700px;
+            background-color: darkkhaki;
+            transform: rotate(180deg);
+        }
+
+        /* transition short-hand */
+        .box2{
+            width: 400px;
+            height: 300px;
+            text-align: center;
+            border: 2px dotted red;
+            border-radius: 10px;
+            background-color: mediumaquamarine;
+
+            /* transition-property | transition-duration |  transition-timing-function | transition-delay */
+            /* transition: all 2s ease-out 0s; */
+
+            /* so in this bgc will take 2s for changing & respectively others take their time to change */
+            transition: background-color 2s, width 6s, transform 1s;
+        }
+        .box2:hover{
+            width: 700px;
+            background-color:lightslategray;
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+    </div>
+</body>
+</html>

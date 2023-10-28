@@ -1,0 +1,64 @@
+<!-- positions > absolute -->
+<!-- works wrt to relative parent -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: inline-block;
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 200px;
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            background-color: white;
+        }
+        img{
+            max-width: 100%;
+        }
+        .mango{
+            left: 250px;
+        }
+        /*
+        .apple{
+            left: 500px;
+        }
+        .papaya{
+            left: 750px;
+        } */
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum non placeat magnam dignissimos, libero doloremque. Quam, molestias distinctio? Dolores nemo magnam alias fugiat aspernatur nobis asperiores facilis dolorum quod obcaecati atque rem harum commodi exercitationem officiis iusto, velit voluptas id, aut eveniet. Quibusdam praesentium sed amet placeat nobis est aspernatur nostrum dolores! Iste exercitationem cum in sint amet beatae minima nulla placeat expedita commodi modi repellat, temporibus laudantium aspernatur quia assumenda?</p>
+    <div class="orange">
+        <img src="../../orange.jpg" alt="orange">
+        <p>Orange</p>
+        <button>1 Kg</button>
+        <button>Add to Cart</button>
+    </div>
+    <div class="mango">
+        <img src="../../mango.jpg" alt="mango">
+        <p>Mango</p>
+        <button>1 Kg</button>
+        <button>Add to Cart</button>
+    </div>
+    <div class="apple">
+        <img src="../../apple.jpg" alt="apple">
+        <p>Apple</p>
+        <button>1 Kg</button>
+        <button>Add to Cart</button>
+    </div>
+    <div class="papaya">
+        <img src="../../../papaya.webp" alt="papaya">
+        <p>Papaya</p>
+        <button>1 Kg</button>
+        <button>Add to Cart</button>
+    </div>
+
+</body>
+</html>

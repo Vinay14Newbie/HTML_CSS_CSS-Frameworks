@@ -1,0 +1,51 @@
+<!-- nth-child | checked | not() -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* nth child */
+        /* of course it will select Banana */
+        .fruit_list li:nth-child(3){
+            color: yellow;
+        }
+        .fruit_list li:first-child{
+            color: red;
+        }
+        .fruit_list li:last-child{
+            color: purple;
+        }
+
+
+        /* checked */
+        input:checked{
+            width: 40px;
+            height: 50px;
+        }
+
+
+        /* not() property */
+        /* it will ignore first child that apple so apple will not get underlined */
+        .fruit_list li:not(.fruit_list li:first-child){
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <ol class="fruit_list" type="I">
+        <li>Apple</li>
+        <li>Mango</li>
+        <li>Banana</li>
+        <li>Orange</li>
+        <li>Grapes</li>
+    </ol>
+    <label for="name">Name:</label>
+    <input type="text" placeholder="Enter name" name="nam" id="name">
+
+    <label for="age">19+?</label>
+    <input type="checkbox" name="19+" id="age">
+</body>
+</html>

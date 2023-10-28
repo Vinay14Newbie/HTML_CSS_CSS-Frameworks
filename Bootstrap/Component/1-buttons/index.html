@@ -1,0 +1,37 @@
+<!-- buttons -->
+<!-- Use Bootstrap’s custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .btn-success{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <!-- Bootstrap has a base .btn class that sets up basic styles such as padding and content alignment. By default, .btn controls have a transparent border and background color, and lack any explicit focus and hover styles. -->
+    <div class="container">
+        <!-- Bootstrap just set the default color to it's meaning of name, we can change it anytime -->
+        <button class="btn btn-danger">Click me</button>
+        <button class="btn btn-primary disabled">Click me</button>  <!-- disabled freeze the button / makes unclikable-->
+        <button class="btn btn-success">Click me</button>
+
+        <!-- there are different sizes of buttons available 'lg' for large & 'sm' for small -->
+        <button class="btn btn-warning btn-lg">Click me</button>
+        <button class="btn btn-secondary btn-sm">Click me</button>
+
+        <!-- .btn-outline-___ ones to remove all background images and colors on any button -->
+        <button class="btn btn-outline-success">Click me</button>
+
+        <!-- this way we can made button for anchor tag -->
+        <a href="#" class="btn btn-primary">Contact me</a>
+    </div>
+</body>
+</html>

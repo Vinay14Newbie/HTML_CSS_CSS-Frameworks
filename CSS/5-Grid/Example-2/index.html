@@ -1,0 +1,58 @@
+<!-- grid-area | grid-template-areas -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            height: 100vh;
+            background-color: grey;
+            display: grid;
+            grid-template-areas: 
+            'HEADER HEADER HEADER HEADER HEADER'    
+            'MENU MAIN MAIN RIGHT RIGHT'
+            'MENU MAIN MAIN RIGHT RIGHT'
+            'MENU MAIN MAIN RIGHT RIGHT'
+            'MENU FOOTER FOOTER FOOTER FOOTER'
+            ;
+        }
+        .header{
+            grid-area: HEADER;
+            background-color: orangered;
+        }
+        .menu{
+            grid-area: MENU;
+            background-color: black;
+        }
+        .main{
+            grid-area: MAIN;
+            background-color: green;
+        }
+        .right{
+            grid-area: RIGHT;
+            background-color: orange;
+        }
+        .footer{    
+            grid-area: FOOTER;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header"></div>
+        <div class="menu"></div>
+        <div class="main"></div>
+        <div class="right"></div>
+        <div class="footer"></div>
+    </div>
+</body>
+</html>

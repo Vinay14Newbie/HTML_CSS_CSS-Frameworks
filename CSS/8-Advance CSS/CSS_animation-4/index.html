@@ -1,0 +1,121 @@
+<!-- animation -->
+<!-- @keyframes duration | easing-function | delay | iteration-count | direction  fill-mode | play-state | name -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+            border-radius: 10px;
+            background-color: beige;
+            border: 3px dotted red;
+        }
+        .box1{
+            margin: 10px;
+            width: 400px;
+            height: 100px;
+            padding-top: 30px;
+            text-align: center;
+            background-color: coral;
+            border: 2px dotted purple;
+            border-radius: 10px;
+            position: relative;  /* bring this for using top-left like properties */
+
+            animation-name: rightMovement;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-delay: 0s;
+
+            animation-timing-function: linear; /*ease-in:slow start | ease-out:slow end | ease-in-out:slow start-end | ease:slow start fast end | linear: same speed | cubic-bezier(n,n,n,n):define your own value*/
+            /* animation-timing-function:cubic-bezier(0.1, 0.7, 1.0, 0.1); */
+
+            animation-direction:alternate-reverse; /*defines direction of when firt iteration done */
+
+            animation-fill-mode:backwards;  /*defines position of the box when it is not animating */
+        }
+        @keyframes rightMovement{
+            from{
+                top: 0;
+                left: 0;
+            }
+            to{
+                top: 0;
+                left: 1000px;
+            }
+        }
+
+        .box2{
+            margin: 10px;
+            width: 400px;
+            height: 100px;
+            padding-top: 30px;
+            text-align: center;
+            background-color: coral;
+            border: 2px dotted purple;
+            border-radius: 10px;
+            position: relative;
+
+            /* @keyframes duration | easing-function | delay | iteration-count | direction | fill-mode | play-state | name */
+            animation: 3s ease-in 0s infinite normal both running slidein;
+
+        }
+        @keyframes slidein{
+            from{
+                top:55%;
+                left:0;
+            }
+            to{
+                top:55%;
+                left: 1050px;
+            }
+        }
+
+        .circle{
+            width: 100px;
+            height: 100px;
+            background-color: lightgreen;
+            border-radius: 50%;
+            border: 2px dotted red;
+            text-align: center;
+            position: relative;
+
+            animation: 2s linear 1s infinite alternate-reverse both running circle;
+        }
+        @keyframes circle{
+            0%{
+                top: 0;
+                left: 0;
+            }
+            33%{
+                top: 0;
+                left: 90%;
+            }
+            66%{
+                top: 50%;
+                left: 0;
+            }
+            100%{
+                top: 50%;
+                left: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1">1</div>
+        <div class="circle">O</div>
+        <div class="box box2">2</div>
+    </div>
+</body>
+</html>

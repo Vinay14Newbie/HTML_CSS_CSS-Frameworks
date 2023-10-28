@@ -1,0 +1,80 @@
+<!-- CSS functions -->
+<!-- calc() | attr() | var() | min() | max() -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* so here  '':root' pseudo-class represents the highest-level parent in the document hierarchy, which is typically the <html> element */
+        /* so if we declare this property inside any other element that will limited to only that element */
+        :root{
+            /* -- is just naming convention */
+            --leftbar_bgc: lightgreen;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            /* min() | max() */
+
+            /* it chooses min value at first */
+            /* This example ensures that the width size is at least 70% but can grow with the viewport width. */
+            width: min(100vw, 70%);
+            /* OR instead of this you can do this */
+            /* width: 100vw;
+            max-width: 70%; */
+
+            /* opposite of the min() */
+            width: max(100vw, 1200px);
+
+            height: 100vh;
+            /* margin: auto; */
+        }
+        .leftbar{
+            width: 250px;
+            height: 100vh;
+            /* var() */
+            /* so this is how we declare the var function */
+            background-color: var(--leftbar_bgc);
+            display: inline-block;
+        }
+        .rightbar{
+            /* calc() */
+            /* so very important note when using this remember giving the spacing after & before '-' sign is very important else it will not work */
+            width: calc(100% - 250px);
+            
+            height: 100vh;
+            background-color: #ff703c;
+            float: right;
+        }
+
+        /* attr() */
+        /* by doing this href which contains link will show after the anchor tag in the bracket cause i've used bracket here */
+        .rightbar p a::after{
+            content: "("attr(href)")";
+            /* content: attr(href); */   /* Or you do this as well */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="leftbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">More</a></li>
+            </ul>
+        </div>
+        <div class="rightbar">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero quisquam harum fugiat corporis inventore et voluptatibus, hic sint facere voluptatem ut rem quibusdam, error facilis autem excepturi. Ex, quibusdam quod!
+                <a href="#">Read more...</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

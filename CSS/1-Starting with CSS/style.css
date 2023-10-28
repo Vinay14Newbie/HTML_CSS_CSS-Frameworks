@@ -1,0 +1,91 @@
+/* External CSS */
+
+/* Grouping selector */
+/* id and class has same syntax for grouping selector */
+#Sahil, #Vinay{
+    color: aqua;
+}
+
+/* element selector */
+h1{
+    color: purple;
+}
+img{
+    width: 250px;
+    height: 340px;
+}
+
+/* class selector */
+.title{
+    /* named color */
+    color: red;
+}
+.student_name {
+    color: green;
+}
+
+/* id selector */
+#Vinay{
+    /* hsl color */
+    color: hsl(23, 24, 25);
+}
+#Sahil{
+    /* rgb color   */
+    color: rgb(8, 121, 44);
+}
+
+.banner{
+    width: 500px;
+    height: 700px;
+    background-color: rgb(81, 169, 169);
+    background-image: url(../mango.jpg);
+    
+
+
+    /* background repeat property */
+    /* it repeats horizontally only one block of line*/
+    /* background-repeat: repeat-x; */
+
+    /* repeat all over the background till space is not empty */
+    background-repeat: repeat;
+    
+    /* it repeats vertically */
+    background-repeat: repeat-y;
+
+    /* show only once */
+    background-repeat: no-repeat; 
+
+
+
+    /* background attachment property */
+    /* in this when scroll down the page img stays at fixed position this is an interesting property */
+    background-attachment: fixed;
+
+    /* local  */
+    background-attachment: local;
+
+    /* default it on scroll by scrolling the page background image also scroll down */
+    background-attachment: scroll;
+
+
+
+    /* background  position property */
+    /* keyword values */
+    background-position: top;
+    background-position: left;
+    background-position: right;
+    background-position: bottom;
+    background-position: center;
+
+    /* percentage values */
+    background-position: 25% 75%;
+
+    /* edge offsets value */
+    background-position: bottom 5px left 5px;
+}
+
+/* opacity */
+#check{
+    /* lower value low visiability 1 is normal photo */
+    opacity: 0.2;
+}

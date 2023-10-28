@@ -1,0 +1,49 @@
+<!-- grid-area -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            width: 50%;
+            gap: 20px;
+            border: 1px solid black;
+
+            /* it will create 2 col with equal spacing */
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .item{
+            background-color: orange;
+            border: 1px solid black;
+            width: 40px;
+            height: 40px;
+        }
+        .rider{
+            background-color: green;
+            color: white;
+
+            display: grid;
+
+            /* grid-area short hand | row-start/col-start/row-end/col-end */
+            grid-area: 2 / 2 / 5/ 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="rider">Rider</div>
+        <div class="item">One</div>
+        <div class="item">Two</div>
+        <div class="item">Three</div>
+        <div class="item">Four</div>
+        <div class="item">Five</div>
+        <div class="item">Six</div>
+        <div class="item">Seven</div>
+        <div class="item">Eight</div>
+    </div>
+</body>
+</html>

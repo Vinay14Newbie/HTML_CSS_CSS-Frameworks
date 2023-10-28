@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../../../PW_Assignments"
+		},
+		{
+			"path": "../../.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Web_Dev"
+	}
+}

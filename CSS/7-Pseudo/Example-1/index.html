@@ -1,0 +1,59 @@
+<!-- 14oct 2023 -->
+<!-- pseudo class : hover | visited | focus -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .buy_now{
+            width: 150px;
+            height: 30px;
+            padding: 5px 10px;
+            border-radius: 15px;
+            border: none;
+            background-color: rgb(255, 216, 20);
+            cursor: pointer;
+        }
+
+        /* when hover */
+        .buy_now:hover{
+            border: 0.5px solid rgb(145, 138, 104);
+            background-color: rgb(227, 198, 54);
+            font-weight: 700;
+        }
+        .buy_more{
+            text-decoration: none;
+        }
+        .buy_more:hover{
+            text-decoration: underline;
+        }
+        
+        /* by visited property it will affected after visiting link */
+        .buy_more:visited{
+            color: tomato;
+        }
+
+        /* when you click & started typing bgc will change */
+        #text:focus{
+            background-color: chartreuse;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <button class="buy_now">Pay now</button>
+    <a href="###" class="buy_more">Buy more...</a>
+    <form action="#">
+        <input id="text" type="text" minlength="4" placeholder="Enter name">
+    </form>
+</body>
+</html>

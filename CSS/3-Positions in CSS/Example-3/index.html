@@ -1,0 +1,56 @@
+<!-- positions > relative -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: inline-block;
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 200px;
+            position: relative;
+        }
+        img{
+            max-width: 100%;
+        }
+
+        /* by using position:relative you will not impact any other images & fit yourself on your own without manupulating other img position */
+        .apple{
+            left: 100px;
+            top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="orange">
+        <img src="../../orange.jpg" alt="orange">
+        <p>Orange</p>
+        <button>1 Kg</button>
+        <button>Add to Cart</button>
+    </div>
+    <div class="mango">
+        <img src="../../mango.jpg" alt="mango">
+        <p>Mango</p>
+        <button>1 Kg</button>
+        <button>Add to Cart</button>
+    </div>
+    <div class="apple">
+        <img src="../../apple.jpg" alt="apple">
+        <p>Apple</p>
+        <button>1 Kg</button>
+        <button>Add to Cart</button>
+    </div>
+    <div class="papaya">
+        <img src="../../../papaya.webp" alt="papaya">
+        <p>Papaya</p>
+        <button>1 Kg</button>
+        <button>Add to Cart</button>
+    </div>
+
+</body>
+</html>

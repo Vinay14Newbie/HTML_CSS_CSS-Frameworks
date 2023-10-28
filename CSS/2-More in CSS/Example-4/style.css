@@ -1,0 +1,41 @@
+/* table styling */
+
+table, th, td{
+    border: 1px solid black;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+th{
+    height: 40px;
+    text-align: left;
+    vertical-align: top;
+    padding: 10px;
+}
+tr{
+    height: 25px;
+}
+td{
+    text-align: center;
+    padding: 10px;
+}
+
+/* it draw the horizontal lines in between the tr */
+/* th, td{
+    border-bottom: 1px solid black;
+} */
+
+tr:hover{
+    background-color: coral;
+}
+
+/* when we hover on colored row background color will not change due to this */
+tr:nth-child(even){
+    background-color: #ddd;
+}
+
+th{
+    background-color: #04AA6D;
+    color: white;
+}

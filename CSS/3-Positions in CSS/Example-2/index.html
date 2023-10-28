@@ -1,0 +1,65 @@
+<!-- display | visibility -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            width: 200px; 
+            /* height: 300px; */
+            border: 1px solid #ccc;
+            padding: 10px;
+            /* inline it makes block element to inline as well it allows you to give dimension to that element */
+            display: inline-block;
+        }
+        img{
+            /* previously we learned % work wrt parent so here card is a parent so max-width will adjust to the 200px as above automatically */
+            max-width: 100%;
+        }
+
+        span{
+            display: inline-block;
+            width: 200px;
+            border: 3px dotted red;
+            margin: 10px;
+        }
+
+        /* unlike diplay:none property it just not render the img but the space occupied by img still remain there */
+        /* it just like owner's place no one going to seat there */
+        #apple{
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="../../mango.jpg" alt="mango">
+        <p>Mango</p>
+        <!-- button has by default inline-block property -->
+        <button>1 Kg</button>
+        <button>Add to Cart</button>
+    </div>
+    <div class="card">
+        <img src="../../orange.jpg" alt="orange">
+        <p>Orange</p>
+        <button>1 Kg</button>
+        <button>Add to Cart</button>
+    </div>
+
+    <div>
+        <!-- by using diplay:none you can hide/remove that element -->
+        <span style="display: none;">Span1</span>
+
+        <span>Span2</span>
+        <span>Span3</span>
+        <span>Span4</span>
+    </div>
+
+    <!-- img consist inline property -->
+    <img id="apple" src="../../apple.jpg" alt="apple">
+    <img src="../../owl.jpg" height="200px" width="200px" alt="owl">
+</body>
+</html>

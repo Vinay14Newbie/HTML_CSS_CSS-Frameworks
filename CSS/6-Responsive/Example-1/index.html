@@ -1,0 +1,32 @@
+<!-- 8th october 2023 -->
+<!-- box-sizing -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item{
+            width: 150px;
+            height: 150px;
+            display: inline-block;
+            padding: 10px;
+            text-align: center;
+            border: 10px dotted red;
+            background-color: coral;
+        }
+        .second{
+            /* box-sizing */
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item first">Here, without box-sizing, it adding the size of padding & border in it</div>
+        <div class="item second">Here, with box-sizing, it taking only given width & height size</div>
+    </div>
+</body>
+</html>

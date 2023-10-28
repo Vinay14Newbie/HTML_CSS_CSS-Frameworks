@@ -1,0 +1,74 @@
+<!-- grid-column-start/end | grid-row-start/end -->
+<!-- grid-column | grid-row -->
+<!-- span | repeat-->
+<!-- order -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            width: 50%;
+            gap: 20px;
+            border: 1px solid black;
+
+            /* it will create 2 col with equal spacing */
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .item{
+            background-color: orange;
+            border: 1px solid black;
+            width: 40px;
+            height: 40px;
+        }
+        .rider{
+            background-color: green;
+            color: white;
+
+            display: grid;
+
+            /* column */
+            /* it defines grid items start position & end position respectively */
+            /* grid-column-start: 2; */
+            /* grid-column-end: 5; */
+
+            /* short hand for above */
+            /* grid-column: 3/7; */
+        
+            /* span property */
+            /* grid-column-start: span 3; */
+
+
+            /* row */
+            /* it exactly similar to the column */
+            /* grid-row-start: 2;  */
+            /* grid-row-end: 5; */
+
+            /* grid-row: 2/6; */
+
+            /* grid-row-start: 2; */
+            /* grid-row-end: span 3; */
+
+            /* order property spceficies the order of the item */
+            order: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="rider item">Rider</div>
+        <div class="item">One</div>
+        <div class="item">Two</div>
+        <div class="item">Three</div>
+        <div class="item">Four</div>
+        <div class="item">Five</div>
+        <div class="item">Six</div>
+        <div class="item">Seven</div>
+        <div class="item">Eight</div>
+    </div>
+</body>
+</html>

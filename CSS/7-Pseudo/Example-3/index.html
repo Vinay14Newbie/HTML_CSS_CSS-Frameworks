@@ -1,0 +1,40 @@
+<!-- pseudo-selector > ::placeholder |  ::after/::before-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* it will select all the placeholder */
+        /* ::placeholder{
+            color:red;
+        } */
+        /* it will select only 'name' id's placeholder */
+        /* #name::placeholder{
+            color: red;
+        } */
+
+
+        /* adds the things before and after the element */
+        .dropdown span:nth-child(1)::before{
+            color: red;
+            content: "►";
+        }
+        .dropdown span:nth-child(2)::after{
+            color: green;
+            content: "▼";
+        }
+    </style>
+</head>
+<body>
+    <div class="dropdown">
+        <span>Open</span>
+        <span>Collapse</span>
+    </div>
+    <!-- &#9658;
+    &#9660; -->
+</body>
+</html>

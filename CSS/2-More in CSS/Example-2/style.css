@@ -1,0 +1,25 @@
+.container{
+    background-color: orange;
+}
+.box1{
+    background-color: green;
+    
+    /* box model */
+    padding: 10px;
+    margin: 20px;
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+}
+
+/* min-max height/widht | overflow */
+.box2{
+    background-color: red;
+    width: 200px;
+    max-height: 100px;
+    /* max-height: 200px; */
+    /* min-height: 200px; */
+    /* overflow: hidden; */
+    /* overflow: visible; */
+    overflow: auto;
+}

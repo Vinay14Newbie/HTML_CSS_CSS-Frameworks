@@ -1,0 +1,114 @@
+<!-- 23Sep 2023 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- here attribute 'rel' is important tell what is the relation of that link -->
+    <link rel="stylesheet" href="style.css">  <!-- ./ use for same folders -->
+
+    <!-- Internal CSS -->
+    <style>
+        /* Descendent combinator */
+        /* here i'm targeting class inside class by defining space */
+        /* you can say space is whatever inside the selector class */
+        .karnataka .female{
+            color: green;
+        }
+
+        /* child combinator */
+        .karnataka > .first .female{
+            color: green;
+        }
+
+
+        /* Types if selector */
+        /* universal selector */
+        *{
+            text-decoration: underline;
+        }
+
+        /* element selector */
+        h1{
+            color: purple;
+        }
+        img{
+            width: 250px;
+            height: 340px;
+        }
+
+        /* class selector */
+        .title{
+            color: red;
+        }
+        
+        .student_name {
+            color: green;
+        }
+
+        /* id selector */
+        #Vinay{
+            color: brown;
+        } 
+        #Sahil{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">Hello !</h1>
+
+    <!-- Priority : inline > internal > external -->
+    <!-- so in that sense the 'Vinay' color will be as follow everytime -->
+    <h1 class="student_name" id="Vinay" style="color: rgb(145, 145, 32);">Vinay</h1>
+
+    <h1 class="student_name" id="Sahil">Sahil</h1>
+
+    <!-- Inline CSS -->
+    <h2 style="color: rgb(71, 102, 9);">Owl image</h2>
+
+    <img src="../owl.jpg" alt="owl">
+
+    <div class="banner">
+        Banner just
+    </div>
+
+    <h1>Karnataka</h1>
+    <div class="karnataka">
+        <div class="first">
+            <h4 class="female">female</h4>
+            <h4 class="female">female</h4>
+            <h4 class="male">male</h4>
+            <h4 class="female">female</h4>
+            <h4 class="male">male</h4>
+        </div>
+        <h4 class="female">female</h4>
+        <h4 class="female">female</h4>
+    </div>
+
+    <h1>Gujrat</h1>
+    <div class="gujrat">
+        <h4 class="female">female</h4>
+        <h4 class="female">female</h4>
+        <h4 class="male">male</h4>
+        <h4 class="female">female</h4>
+        <h4 class="male">male</h4>
+    </div>
+
+    <h1>Maharashtra</h1>
+    <div class="maharashtra">
+        <h4 class="female">female</h4>
+        <h4 class="female">female</h4>
+        <h4 class="male">male</h4>
+        <h4 class="female">female</h4>
+        <h4 class="male">male</h4>
+    </div>
+    
+
+    <!-- opacity / visibility -->
+    <img id="check" src="../pikachu.png" alt="pikachu">
+</body>
+</html>

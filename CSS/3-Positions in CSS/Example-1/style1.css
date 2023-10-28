@@ -1,0 +1,26 @@
+/* em | % */
+
+.parent{
+    width: 100%;
+    /* top right bottom left */
+    padding: 30px 0 30px 0;
+}
+.parent1{
+    background-color: antiquewhite;
+    font-size: 48px;
+}
+.parent2{
+    background-color: lightcoral;
+    font-size: 24px;
+}
+.child{
+    background-color: yellow;
+    width: 50%;
+}
+.child1{
+    /* using em while giving size to the font is good cause you will had more control on it */
+    font-size: 0.5em;
+}
+.child2{
+    font-size: 0.75em;
+}

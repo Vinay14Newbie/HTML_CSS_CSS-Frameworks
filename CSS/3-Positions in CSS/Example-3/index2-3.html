@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .popover{
+            border: 1px solid #ccc;
+            background-color: antiquewhite;
+            display: none;
+            position: absolute;
+            left: 30px;
+        }
+        .popover-wrapper{
+            width: 165px;
+            background-color: orange;
+            margin: 100px;
+            
+            /* by doing this 'popover-wrapper' will become the parent of the 'popover' class */
+            position: relative;
+            /* top: 120px; */
+        }
+        .popover-wrapper:hover .popover{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="popover-wrapper">
+        <button>Login</button>
+        <div class="popover">
+            <ul>
+                <li>Home</li>
+                <li>Dashboard</li>
+                <li>Account</li>
+                <li>Contact Us</li>
+            </ul>
+        </div>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, soluta enim. Similique dolor animi id sapiente perspiciatis, inventore eaque alias. Perspiciatis doloremque sequi deleniti blanditiis, asperiores veniam voluptates aperiam sit?</p>
+</body>
+</html>

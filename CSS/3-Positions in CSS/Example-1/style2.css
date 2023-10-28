@@ -1,0 +1,28 @@
+/* rem | vw/vh */
+
+html{
+    font-size: 48px;
+}
+.parent{
+    /* here my parent width 50% of the screen */
+    width: 50%;
+}
+.parent1{
+    background-color: antiquewhite;
+}
+.parent2{
+    background-color: lightcoral;
+}
+.child{
+    background-color: yellow;
+    /* as above my parent width is 50% no matter what with the 'vw' we can set the width to 100% */
+    width: 100vw;
+    height: 10vh;
+}
+.child1{
+    /* using em while giving size to the font is good cause you will had more control on it */
+    font-size: 0.5rem;
+}
+.child2{
+    font-size: 0.75rem;
+}
