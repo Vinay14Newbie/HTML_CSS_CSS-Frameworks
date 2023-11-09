@@ -1,0 +1,42 @@
+<!-- 
+    1)  Setup project:  npm install -D tailwindcss
+    npx tailwindcss init
+
+    2)  Configure your template paths: (inside a file.config.js) like this
+    /** @type {import('tailwindcss').Config} */
+    module.exports = {
+    content: ["./index.html"],
+    theme: {
+        extend: {},
+    },
+    plugins: [],
+    }
+
+    3)  Add the Tailwind directives to your CSS: you have to make different file for input css & have to add this all stuffs in it
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+    4)  Start the Tailwind CLI build process: in the terminal write this
+    npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
+
+    5) & at end to constantly run the tailwind do this
+    npx tailwindcss -i ../src/input.css -o ./style.css --watch
+
+    Start using Tailwind in your HTML, don't forget to link index file with css file
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="bg-green-400">Text</h1>
+    <img src="anime.jpg" alt="">
+</body>
+</html>
